@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Marquis Medicals</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/mdb.min.css" />
+    <link rel="stylesheet" href="assets/css/style2.css" />
+    <script>
+      function SearchDisease() {
+        let activeDisease = document.getElementById("search").value;
+        let diseasep = document.getElementById(activeDisease);
+        result = document.getElementById("resultDiv");
+
+        result.innerHTML = diseasep.innerHTML;
+      }
+    </script>
+    <!-- =======================================================
+  * Template Name: eNno
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/enno-free-simple-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo"><a href="index.html">Marquis Medicals</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+        <!-- .navbar -->
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"
+          >
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h1>Disease, what it is?</h1>
+            <h2>
+              This is a medical website that helps in the knowledge of old and
+              new diseases. Use the search bar below to find out about them!
+              <br />
+              <br />
+              NOTE:The first word of the disease must be in Capital letter!!
+            </h2>
+            <form class="form-inline md-form mr-auto mb-4">
+              <input
+                class="form-control mr-sm-2"
+                type="text"
+                id="search"
+                placeholder="Type Disease"
+              />
+              <button
+                class="btn aqua-gradient btn-rounded btn-sm my-0"
+                type="button"
+                value="search"
+                onclick="SearchDisease()"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img">
+            <img src="assets/img/about.png" class="img-fluid animated" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <b>
+      <div class="detail-box" id="resultDiv"></div>
+    </b>
+    <div style="display: none" id="covid-19">
+      <p>
+        Coronaviruses are a family of viruses that can cause respiratory illness
+        in humans. They are called “corona” because of crown-like spikes on the
+        surface of the virus. Severe acute respiratory syndrome (SARS), Middle
+        East respiratory syndrome (MERS) and the common cold are examples of
+        coronaviruses that cause illness in humans. The new strain of
+        coronavirus — SARS-CoV-2 — was first reported in Wuhan, China in
+        December 2019. It has since spread to every country around the world.<br /><br />
+        Coronaviruses are often found in bats, cats and camels. The viruses live
+        in but don’t infect the animals. Sometimes these viruses then spread to
+        different animal species. The viruses may change (mutate) as they
+        transfer to other species. Eventually, the virus can jump from animal
+        species and begin to infect humans. In the case of SARS-CoV-19, the
+        first people infected are thought to have contracted the virus at a food
+        market that sold meat, fish and live animals.<br /><br />
+        SARS-CoV-2, the virus that causes COVID-19, enters your body through
+        your mouth, nose or eyes (directly from the airborne droplets or from
+        the transfer of the virus from your hands to your face). It then travels
+        to the back of your nasal passages and mucous membrane in the back of
+        your throat. It attaches to cells there, begins to multiply and moves
+        into lung tissue. From there, the virus can spread to other body
+        tissues.<br />
+        If you have COVID-19 it can take several days to develop symptoms — but
+        you’re contagious during this time. You are no longer contagious 10 days
+        after your symptoms began. The best way to avoid spreading COVID-19 to
+        others is to:
+      </p>
+      <ul>
+        <li>Stay 6 feet away from others whenever possible.</li>
+        <li>
+          Wear a cloth mask that covers your mouth and nose when around others.
+        </li>
+        <li>
+          Wash your hands often. If soap isn’t available, use a hand sanitizer
+          that contains at least 60% alcohol.
+        </li>
+        <li>
+          Avoid crowded indoor spaces. Open windows to bring in outdoor air as
+          much as possible.
+        </li>
+        <li>
+          Stay self-isolated at home if you are feeling ill with symptoms that
+          could be COVID-19 or have a positive test for COVID-19.
+        </li>
+        <li>Clean and disinfect frequently touched surfaces.</li>
+      </ul>
+    </div>
+
+    <div style="display: none" id="malaria">
+      <p>
+        Malaria is a life-threatening disease primarily found in tropical
+        countries. It is both preventable and curable. However, without prompt
+        diagnosis and effective treatment, a case of uncomplicated malaria can
+        progress to a severe form of the disease, which is often fatal without
+        treatment.<br /><br />
+        Malaria is not contagious and cannot spread from one person to another;
+        the disease is transmitted through the bites of female Anopheles
+        mosquitoes. Five species of parasites can cause malaria in humans and 2
+        of these species – Plasmodium falciparum and Plasmodium vivax – pose the
+        greatest threat. There are over 400 different species of Anopheles
+        mosquitoes and around 40, known as vector species, can transmit the
+        disease. <br /><br />This risk of infection is higher in some areas than
+        others depending on multiple factors, including the type of local
+        mosquitoes. It may also vary according to the season, the risk being
+        highest during the rainy season in tropical countries.<br /><br />
+        The first symptoms of malaria usually begin within 10–15 days after the
+        bite from an infected mosquito. Fever, headache and chills are typically
+        experienced, though these symptoms may be mild and difficult to
+        recognize as malaria. In malaria endemic areas, people who have
+        developed partial immunity may become infected but experience no
+        symptoms (asymptomatic infections).<br /><br />
+        WHO recommends prompt diagnosis for anyone with suspected malaria. If
+        Plasmodium falciparum malaria is not treated within 24 hours, the
+        infection can progress to severe illness and death. Severe malaria can
+        cause multi-organ failure in adults, while children frequently suffer
+        from severe anaemia, respiratory distress or cerebral malaria. Human
+        malaria caused by other Plasmodium species can cause significant illness
+        and occasionally life-threatening disease. <br /><br />Malaria can be
+        diagnosed using tests that determine the presence of the parasites
+        causing the disease. There are 2 main types of tests:<br /><br />
+        microscopic examination of blood smears and rapid diagnostic tests.
+        Diagnostic testing enables health providers to distinguish malarial from
+        other causes of febrile illnesses, facilitating appropriate
+        treatment.<br /><br />Malaria is a treatable disease. Artemisinin-based
+        combination therapies (ACTs) are the most effective antimalarial
+        medicines available today and the mainstay of recommended treatment for
+        Plasmodium falciparum malaria, the deadliest malaria parasite globally.
+        <br /><br />ACTs combine 2 active pharmaceuticals with different
+        mechanisms of action, including derivates of artemisinin extracted from
+        the plant Artemisia annua and a partner drug. The role of the
+        artemisinin compound is to reduce the number of parasites during the
+        first 3 days of treatment, while the role of the partner drug is to
+        eliminate the remaining parasites.<br /><br />
+        As no alternative to artemisinin derivatives is expected to enter the
+        market for several years, the efficacy of ACTs must be preserved, which
+        is why WHO recommends that treatment should only be administered if a
+        person tests positive for malaria. WHO does not support the promotion or
+        use of Artemisia plant material (whether teas, tablets or capsules) for
+        the prevention or treatment of malaria. <br /><br />Over the last
+        decade, parasite resistance to antimalarial medicines has emerged as a
+        threat in the fight against malaria, particularly in the Greater Mekong
+        subregion. WHO is also concerned about more recent reports of
+        drug-resistant malaria in Africa. To date, resistance has been
+        documented in 3 of the 5 malaria species known to affect humans: P.
+        falciparum, P. vivax, and P. malariae. However, nearly all patients
+        infected with artemisinin-resistant parasites who are treated with an
+        ACT are fully cured, provided the partner drug is highly efficacious.
+      </p>
+    </div>
+
+    <div style="display: none" id="Lassa fever">
+      <p>
+        Lassa fever is an animal-borne, or zoonotic, acute viral illness spread
+        by the common African rat. It is endemic in parts of West Africa
+        including Sierra Leone, Liberia, Guinea and Nigeria. Neighboring
+        countries are also at risk because the animal vector lives throughout
+        the region. The first documented case occurred in 1969. Lassa fever is
+        named after the town in Nigeria where the first cases occurred.<br /><br />About
+        100,000 to 300,000 infections of Lassa fever occur annually, with about
+        5,000 deaths. Surveillance for Lassa fever varies between locations so
+        these estimates are crude. In some areas of Sierra Leone and Liberia,
+        about 10-16% of people admitted to hospitals annually have Lassa fever.
+        This shows the serious impact the disease has on the region.<br /><br />
+        The reservoir, or host, of Lassa virus is a rodent known as the
+        “multimammate rat” (Mastomys natalensis). Once infected, this rodent is
+        able to excrete virus in urine for an extended time period, maybe for
+        the rest of its life. Mastomys rodents breed frequently, produce large
+        numbers of offspring, and are numerous in the savannas and forests of
+        west, central, and east Africa. In addition, Mastomys readily colonize
+        human homes and areas where food is stored. All of these factors
+        contribute to the relatively efficient spread of Lassa virus from
+        infected rodents to humans.<br /><br />
+        Transmission of Lassa virus to humans occurs most commonly through
+        ingestion or inhalation. Mastomys rodents shed the virus in urine and
+        droppings and direct contact with these materials, through touching
+        soiled objects, eating contaminated food, or exposure to open cuts or
+        sores, can lead to infection.<br /><br />
+        Signs and symptoms of Lassa fever typically occur 1-3 weeks after the
+        patient comes into contact with the virus. For the majority of Lassa
+        fever virus infections (approximately 80%), symptoms are mild and are
+        undiagnosed. Mild symptoms include slight fever, general malaise and
+        weakness, and headache. In 20% of infected individuals, however, disease
+        may progress to more serious symptoms including hemorrhaging (in gums,
+        eyes, or nose, as examples), respiratory distress, repeated vomiting,
+        facial swelling, pain in the chest, back, and abdomen, and shock.
+        Neurological problems have also been described, including hearing loss,
+        tremors, and encephalitis. Death may occur within two weeks after
+        symptom onset due to multi-organ failure.<br /><br />The most common
+        complication of Lassa fever is deafness. Various degrees of deafness
+        occur in approximately one-third of infections, and in many cases
+        hearing loss is permanent. As far as is known, severity of the disease
+        does not affect this complication: deafness may develop in mild as well
+        as in severe cases.<br /><br />
+        Primary transmission of the Lassa virus from its host to humans can be
+        prevented by avoiding contact with Mastomys rodents, especially in the
+        geographic regions where outbreaks occur. Putting food away in
+        rodent-proof containers and keeping the home clean help to discourage
+        rodents from entering homes. Using these rodents as a food source is not
+        recommended. Trapping in and around homes can help reduce rodent
+        populations; however, the wide distribution of Mastomys in Africa makes
+        complete control of this rodent reservoir impractical.<br /><br />
+        When caring for patients with Lassa fever, further transmission of the
+        disease through person-to-person contact or nosocomial routes can be
+        avoided by taking preventive precautions against contact with patient
+        secretions (called VHF isolation precautions or barrier nursing
+        methods). Such precautions include wearing protective clothing, such as
+        masks, gloves, gowns, and goggles; using infection control measures,
+        such as complete equipment sterilization; and isolating infected
+        patients from contact with unprotected persons until the disease has run
+        its course.
+      </p>
+    </div>
+
+    <div style="display: none" id="Ebola virus">
+      <p>
+        Ebolaviruses were first discovered in 1976 when two consecutive
+        outbreaks of fatal hemorrhagic fever occurred in different parts of
+        Central Africa. The first outbreak occurred in the Democratic Republic
+        of Congo (formerly Zaire) in a village near the Ebola River, which gave
+        the virus its name. The second outbreak occurred in what is now South
+        Sudan, approximately 500 miles (850 km) away.<br /><br />
+        Initially, public health officials assumed these outbreaks were a single
+        event associated with an infected person who traveled between the two
+        locations. Scientists later discovered that the two outbreaks were
+        caused by two genetically distinct viruses: Zaire ebolavirus and Sudan
+        ebolavirus. After this discovery, scientists concluded that these
+        viruses came from two different sources and spread independently to
+        people in each of the affected areas.<br /><br />Following the discovery
+        of these ebolaviruses, scientists studied thousands of animals, insects,
+        and plants in search of the source, or reservoir host. It is believed
+        that African fruit bats are likely involved in the spread of
+        ebolaviruses and may even be the reservoir host. Scientists continue to
+        search for conclusive evidence of the bat’s role in transmission of
+        ebolaviruses. The most recent ebolavirus to be detected, Bombali virus,
+        was identified in samples from bats collected in Sierra Leone.<br /><br />
+        ymptoms may appear anywhere from 2 to 21 days after contact with an
+        ebolavirus, with an average of 8 to 10 days. The course of the illness
+        typically progresses from “dry” symptoms initially (such as fever, aches
+        and pains, and fatigue), and then progresses to “wet” symptoms (such as
+        diarrhea and vomiting) as the person becomes sicker. Primary signs and
+        symptoms of Ebola disease often include some or several of the
+        following:<br /><br />
+      </p>
+      <ul>
+        <li>Fever.</li>
+        <li>
+          Aches and pains, such as severe headache and muscle and joint pain
+        </li>
+        <li>Weakness and fatigue</li>
+        <li>Sore throat</li>
+        <li>Loss of appetite</li>
+        <li>
+          Gastrointestinal symptoms including abdominal pain, diarrhea, and
+          vomiting
+        </li>
+        <li>
+          Unexplained hemorrhaging, bleeding or bruising Other symptoms may
+          include red eyes, skin rash, and hiccups
+        </li>
+      </ul>
+    </div>
+
+    <div style="display: none" id="Zika virus">
+      <p>
+        Zika virus is a mosquito-borne virus first identified in Uganda in 1947
+        in a Rhesus macaque monkey followed by evidence of infection and disease
+        in humans in other African countries in the 1950s. From the 1960s to
+        1980s, sporadic human infections were detected across Africa and Asia.
+        However, since 2007 outbreaks of Zika virus disease have been recorded
+        in Africa, the Americas, Asia and the Pacific.<br /><br />
+        In outbreaks over the last decade Zika virus infection was found to be
+        associated with increased incidence of Guillain-Barré syndrome. When
+        Zika virus emerged in the Americas, with a large epidemic in Brazil in
+        2015, an association between Zika virus infection and microcephaly
+        (smaller than normal head size) was first described; there were similar
+        findings in French Polynesia upon retrospective review. From February to
+        November 2016, WHO declared a Public Health Emergency of International
+        Concern (PHEIC) regarding microcephaly, other neurological disorders and
+        Zika virus, and the causal link between Zika virus and congenital
+        malformations was soon confirmed (1,2). Outbreaks of Zika virus disease
+        were identified throughout most of the Americas and in other regions
+        with established Aedes aegypti mosquitos. Infections were detected in
+        travellers from active transmission areas and sexual transmission was
+        confirmed as an alternate route of Zika virus infection.<br /><br />
+        Cases of Zika virus disease globally declined from 2017 onwards;
+        however, Zika virus transmission persists at low levels in several
+        countries in the Americas and in other endemic regions. In addition, the
+        first local mosquito-transmitted Zika virus disease cases were reported
+        in Europe in 2019 and Zika virus outbreak activity was detected in India
+        in 2021. To date, a total of 89 countries and territories have reported
+        evidence of mosquito transmitted Zika virus infection; however,
+        surveillance remains limited globally.<br /><br />Most people infected
+        with Zika virus do not develop symptoms. Among those who do, they
+        typically start 3–14 days after infection, are generally mild including
+        rash, fever, conjunctivitis, muscle and joint pain, malaise and
+        headache, and usually last for 2–7 days. These symptoms are common to
+        other arboviral and non-arboviral diseases; thus, the diagnosis of Zika
+        virus infection requires laboratory confirmation.<br /><br />here is no
+        specific treatment available for Zika virus infection or disease. People
+        with symptoms such as rash, fever or joint pain should get plenty of
+        rest, drink fluids, and treat symptoms with antipyretics and/or
+        analgesics. Nonsteroidal anti-inflammatory drugs should be avoided until
+        dengue virus infections are ruled out because of bleeding risk. If
+        symptoms worsen, patients should seek medical care and advice. Pregnant
+        women living in areas with Zika transmission or who develop symptoms of
+        Zika virus infection should seek medical attention for laboratory
+        testing, information, counselling and other clinical care.
+      </p>
+    </div>
+
+    <div style="display: none" id="Hepatitis">
+      <p>
+        Hepatitis is an inflammation of the liver that is caused by a variety of
+        infectious viruses and noninfectious agents leading to a range of health
+        problems, some of which can be fatal. There are five main strains of the
+        hepatitis virus, referred to as types A, B, C, D and E. While they all
+        cause liver disease, they differ in important ways including modes of
+        transmission, severity of the illness, geographical distribution and
+        prevention methods. In particular, types B and C lead to chronic disease
+        in hundreds of millions of people and together are the most common cause
+        of liver cirrhosis, liver cancer and viral hepatitis-related deaths. An
+        estimated 354 million people worldwide live with hepatitis B or C, and
+        for most, testing and treatment remain beyond reach.<br /><br />
+        Some types of hepatitis are preventable through vaccination. A WHO study
+        found that an estimated 4.5 million premature deaths could be prevented
+        in low- and middle-income countries by 2030through vaccination,
+        diagnostic tests, medicines and education campaigns. WHO’s global
+        hepatitis strategy, endorsed by all WHO Member States, aims to reduce
+        new hepatitis infections by 90% and deaths by 65% between 2016 and
+        2030.<br /><br />
+        Many people with hepatitis A, B, C, D or E exhibit only mild symptoms or
+        no symptoms at all. Each form of the virus, however, can cause more
+        severe symptoms. Symptoms of hepatitis A, B and C may include fever,
+        malaise, loss of appetite, diarrhoea, nausea, abdominal discomfort,
+        dark-coloured urine and jaundice (a yellowing of the skin and whites of
+        the eyes). In some cases, the virus can also cause a chronic liver
+        infection that can later develop into cirrhosis (a scarring of the
+        liver) or liver cancer. These patients are at risk of death.<br /><br />Safe
+        and effective vaccines are available to prevent hepatitis B virus (HBV).
+        This vaccine also prevents the development of hepatitis D virus (HDV)
+        and given at birth strongly reduces transmission risk from mother to
+        child. Chronic hepatitis B infection can be treated with antiviral
+        agents. Treatment can slow the progression of cirrhosis, reduce
+        incidence of liver cancer and improve long term survival. Only a
+        proportion of people with chronic hepatitis B infection will require
+        treatment. A vaccine also exists to prevent infections of hepatitis E
+        (HEV), although it is not currently widely available. There are no
+        specific treatments for HBV and HEV and hospitalization is not usually
+        required. It is advised to avoid unnecessary medications due to the
+        negative effect on liver function caused by these infections. Hepatitis
+        C (HCV) can cause both acute and chronic infection. Some people recover
+        on their own, while others develop a life-threatening infection or
+        further complications, including cirrhosis or cancer. There is no
+        vaccine for hepatitis C. Antiviral medicines can cure more than 95% of
+        persons with hepatitis C infection, thereby reducing the risk of death
+        from cirrhosis and liver cancer, but access to diagnosis and treatment
+        remains low. Hepatitis A virus (HAV) is most common is low- and
+        middle-income countries due to reduced access to clean and reliable
+        water sources and the increased risk of contaminated food. A safe and
+        effective vaccine is available to prevent hepatitis A. Most HAV
+        infections are mild, with the majority of people recovering fully and
+        developing immunity to further infection. However, these infections can
+        also rarely be severe and life threatening due to the risk of liver
+        failure.
+      </p>
+    </div>
+
+    <div style="display: none" id="Parkinson's disease">
+      <p>
+        Parkinson’s disease is a brain disorder that causes unintended or
+        uncontrollable movements, such as shaking, stiffness, and difficulty
+        with balance and coordination.<br /><br />
+        The most prominent signs and symptoms of Parkinson’s disease occur when
+        nerve cells in the basal ganglia, an area of the brain that controls
+        movement, become impaired and/or die. Normally, these nerve cells, or
+        neurons, produce an important brain chemical known as dopamine. When the
+        neurons die or become impaired, they produce less dopamine, which causes
+        the movement problems associated with the disease. Scientists still do
+        not know what causes the neurons to die.<br /><br />
+        Symptoms usually begin gradually and worsen over time. As the disease
+        progresses, people may have difficulty walking and talking. They may
+        also have mental and behavioral changes, sleep problems, depression,
+        memory difficulties, and fatigue.<br /><br />
+        The main therapy for Parkinson’s is levodopa. Nerve cells use levodopa
+        to make dopamine to replenish the brain’s dwindling supply. Usually,
+        people take levodopa along with another medication called carbidopa.
+        Carbidopa prevents or reduces some of the side effects of levodopa
+        therapy — such as nausea, vomiting, low blood pressure, and restlessness
+        — and reduces the amount of levodopa needed to improve symptoms.<br /><br />
+        People living with Parkinson’s disease should never stop taking levodopa
+        without telling their doctor. Suddenly stopping the drug may have
+        serious side effects, like being unable to move or having difficulty
+        breathing.
+      </p>
+    </div>
+
+    <div style="display: none" id="Cancer">
+      <p>
+        Cancer is a disease in which some of the body’s cells grow
+        uncontrollably and spread to other parts of the body. Cancer can start
+        almost anywhere in the human body, which is made up of trillions of
+        cells. Normally, human cells grow and multiply (through a process called
+        cell division) to form new cells as the body needs them. When cells grow
+        old or become damaged, they die, and new cells take their place.
+        <br /><br />Sometimes this orderly process breaks down, and abnormal or
+        damaged cells grow and multiply when they shouldn’t. These cells may
+        form tumors, which are lumps of tissue. Tumors can be cancerous or not
+        cancerous (benign).<br /><br />
+        Cancerous tumors spread into, or invade, nearby tissues and can travel
+        to distant places in the body to form new tumors (a process called
+        metastasis). Cancerous tumors may also be called malignant tumors. Many
+        cancers form solid tumors, but cancers of the blood, such as leukemias,
+        generally do not. Benign tumors do not spread into, or invade, nearby
+        tissues. When removed, benign tumors usually don’t grow back, whereas
+        cancerous tumors sometimes do. Benign tumors can sometimes be quite
+        large, however. Some can cause serious symptoms or be life threatening,
+        such as benign tumors in the brain.<br /><br />
+        Cancer is a genetic disease—that is, it is caused by changes to genes
+        that control the way our cells function, especially how they grow and
+        divide.<br /><br />Genetic changes that cause cancer can happen because:
+        of errors that occur as cells divide, of damage to DNA caused by harmful
+        substances in the environment, such as the chemicals in tobacco smoke
+        and ultraviolet rays from the sun. (Our Cancer Causes and Prevention
+        section has more information.) ,they were inherited from our parents.<br /><br />The
+        body normally eliminates cells with damaged DNA before they turn
+        cancerous. But the body’s ability to do so goes down as we age. This is
+        part of the reason why there is a higher risk of cancer later in life.
+        <br /><br />Each person’s cancer has a unique combination of genetic
+        changes. As the cancer continues to grow, additional changes will occur.
+        Even within the same tumor, different cells may have different genetic
+        changes.
+      </p>
+    </div>
+
+    <div style="display: none" id="Arthritis">
+      <p>
+        Arthritis and other rheumatic diseases are common conditions that cause
+        pain, swelling, and limited movement. They affect joints and connective
+        tissues around the body. Millions of people in the U.S. have some form
+        of arthritis.<br />
+        Arthritis means redness and swelling (inflammation) of a joint. A joint
+        is where 2 or more bones meet. There are more than 100 different
+        arthritis diseases. Rheumatic diseases include any condition that causes
+        pain, stiffness, and swelling in joints, muscles, tendons, ligaments, or
+        bones. Arthritis is usually ongoing (chronic). Arthritis and other
+        rheumatic diseases are more common in women than men. They are also
+        often linked with old age. But they affect people of all ages.<br /><br />
+        The 2 most common forms of arthritis are:<br /><br />
+        Osteoarthritis: This is the most common type of arthritis. It is a
+        chronic disease of the joints, especially the weight-bearing joints of
+        the knee, hip, and spine. It destroys the coating on the ends of bones
+        (cartilage) and narrows the joint space. It can also cause bone
+        overgrowth, bone spurs, and reduced function. It occurs in most people
+        as they age. It may also occur in young people because of an injury or
+        overuse.<br /><br />
+        Rheumatoid arthritis: This is an inflammatory disease of the joint
+        linings. The inflammation may affect all of the joints. It can also
+        affect organs such as the heart or lungs.
+        <br /><br />
+        The cause depends on the type of arthritis. Osteoarthritis is caused by
+        the wear and tear of the joint over time or because of overuse.
+        Rheumatoid arthritis, lupus, and scleroderma are caused by the body’s
+        immune system attacking the body’s own tissues. Gout is caused by the
+        buildup of crystals in the joints. Some forms of arthritis can be linked
+        to genes. People with genetic marker HLA-B27 have a higher risk of
+        ankylosing spondylitis. For some other forms of arthritis, the cause is
+        not known.
+      </p>
+    </div>
+    <!-- End Hero
+    -->
+    <br />
+    <main id="main">
+      <!-- ======= Featured Services Section ======= -->
+
+      <!-- End Featured Services Section -->
+
+      <!-- ======= About Section ======= -->
+      <section id="about" class="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="assets/img/corona.png" class="img-fluid" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End About Section -->
+
+      <!-- ======= Counts Section ======= -->
+
+      <!-- End Counts Section -->
+
+      <!-- ======= Services Section ======= -->
+
+      <!-- End Services Section -->
+
+      <!-- ======= Portfolio Section ======= -->
+
+      <!-- End Portfolio Section -->
+
+      <!-- ======= Testimonials Section ======= -->
+
+      <!-- End Testimonials Section -->
+
+      <!-- ======= Cta Section ======= -->
+
+      <!-- End Cta Section -->
+
+      <!-- ======= Team Section ======= -->
+      <!-- End Team Section -->
+
+      <!-- ======= Contact Section ======= -->
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="section-title">
+            <span>Contact</span>
+            <h2>Contact</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-5 d-flex align-items-stretch">
+              <div class="info">
+                <div class="email">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>emmanuelmarquis90@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+              <form
+                action="forms/contact.php"
+                method="post"
+                role="form"
+                class="php-email-form"
+              >
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="name">Your Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group col-md-6 mt-3 mt-md-0">
+                    <label for="name">Your Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <label for="name">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="subject"
+                    id="subject"
+                    required
+                  />
+                </div>
+                <div class="form-group mt-3">
+                  <label for="name">Message</label>
+                  <textarea
+                    class="form-control"
+                    name="message"
+                    rows="10"
+                    required
+                  ></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">
+                    Your message has been sent. Thank you!
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit">Send Message</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact Section -->
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+
+    <!-- End Footer -->
+
+    <a
+      href="#"
+      class="back-to-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
