@@ -49,12 +49,75 @@
     <link rel="stylesheet" href="assets/css/mdb.min.css" />
     <link rel="stylesheet" href="assets/css/style2.css" />
     <script>
-      function SearchDisease() {
-        let activeDisease = document.getElementById("search").value;
-        let diseasep = document.getElementById(activeDisease);
-        result = document.getElementById("resultDiv");
+      function searchDisease() {
+        let searched_Disease = document
+          .getElementById("search")
+          .value.toLowerCase()
+          .trim();
+        let disease_Info = document.getElementById(searched_Disease);
+        let disease = document.getElementById("infodiv");
+        let suggestions = document.getElementById("suggestions");
 
-        result.innerHTML = diseasep.innerHTML;
+        suggestions.innerHTML = "";
+
+        if (disease_Info) {
+          disease.innerHTML = disease_Info.innerHTML;
+        } else {
+          disease.innerHTML = "Disease information not currently available.";
+
+          //search suggestions
+          let searchSuggestions = generateSearchSuggestions(searched_Disease);
+          displaySearchSuggestions(searchSuggestions);
+        }
+      }
+
+      function generateSearchSuggestions(searchTerm) {
+        let suggestedDiseases = [
+          "Covid-19",
+          "Ebola virus",
+          "Hepatitis",
+          "Arthritis",
+          "Lassa fever",
+          "Malaria",
+          "Zika virus",
+          "Cancer",
+          "Parkinsons disease",
+        ];
+
+        // Filter suggested disease names based on the search term
+        let filteredSuggestions = suggestedDiseases.filter((disease) =>
+          disease.toLowerCase().startsWith(searchTerm)
+        );
+
+        return filteredSuggestions;
+      }
+
+      function displaySearchSuggestions(suggestions) {
+        let suggestionsContainer = document.getElementById("suggestions");
+
+        suggestionsContainer.innerHTML = "";
+
+        suggestions.forEach((suggestion) => {
+          let suggestionElement = document.createElement("div");
+          suggestionElement.classList.add("suggestion");
+          suggestionElement.textContent = suggestion;
+
+          suggestionElement.addEventListener("click", () => {
+            document.getElementById("search").value = suggestion;
+            searchDisease();
+          });
+
+          suggestionsContainer.appendChild(suggestionElement);
+        });
+      }
+
+      function showSearchSuggestions() {
+        let searchTerm = document
+          .getElementById("search")
+          .value.toLowerCase()
+          .trim();
+        let searchSuggestions = generateSearchSuggestions(searchTerm);
+        displaySearchSuggestions(searchSuggestions);
       }
     </script>
     <!-- =======================================================
@@ -105,7 +168,6 @@
               new diseases. Use the search bar below to find out about them!
               <br />
               <br />
-              NOTE:The first word of the disease must be in Capital letter!!
             </h2>
             <form class="form-inline md-form mr-auto mb-4">
               <input
@@ -113,12 +175,26 @@
                 type="text"
                 id="search"
                 placeholder="Type Disease"
+                oninput="showSearchSuggestions()"
               />
+              <div id="suggestions">
+                <div class="suggestion" style="display: none">Covid-19</div>
+                <div class="suggestion" style="display: none">Cancer</div>
+                <div class="suggestion" style="display: none">Ebola virus</div>
+                <div class="suggestion" style="display: none">Lassar fever</div>
+                <div class="suggestion" style="display: none">Malaria</div>
+                <div class="suggestion" style="display: none">Zika Virus</div>
+                <div class="suggestion" style="display: none">Arthritis</div>
+                <div class="suggestion" style="display: none">
+                  Parkinsons's disease
+                </div>
+                <div class="suggestion" style="display: none">Hepatitis</div>
+              </div>
               <button
                 class="btn aqua-gradient btn-rounded btn-sm my-0"
                 type="button"
                 value="search"
-                onclick="SearchDisease()"
+                onclick="searchDisease()"
               >
                 Search
               </button>
@@ -132,9 +208,14 @@
     </section>
     <hr />
     <b>
-      <div class="detail-box" id="resultDiv"></div>
+      <div
+        class="detail-box"
+        id="infodiv"
+        style="font-size: 27px; margin: 100px"
+      ></div>
     </b>
-    <div style="display: none" id="covid-19">
+
+    <div style="display: none" id="covid-19" class="covid-19">
       <p>
         Coronaviruses are a family of viruses that can cause respiratory illness
         in humans. They are called “corona” because of crown-like spikes on the
@@ -245,7 +326,7 @@
       </p>
     </div>
 
-    <div style="display: none" id="Lassa fever">
+    <div style="display: none" id="lassa fever" class="Lassa fever">
       <p>
         Lassa fever is an animal-borne, or zoonotic, acute viral illness spread
         by the common African rat. It is endemic in parts of West Africa
@@ -308,7 +389,7 @@
       </p>
     </div>
 
-    <div style="display: none" id="Ebola virus">
+    <div style="display: none" id="ebola virus" class="Ebola Virus">
       <p>
         Ebolaviruses were first discovered in 1976 when two consecutive
         outbreaks of fatal hemorrhagic fever occurred in different parts of
@@ -357,7 +438,7 @@
       </ul>
     </div>
 
-    <div style="display: none" id="Zika virus">
+    <div style="display: none" id="zika virus" class="Zika Virus">
       <p>
         Zika virus is a mosquito-borne virus first identified in Uganda in 1947
         in a Rhesus macaque monkey followed by evidence of infection and disease
@@ -405,7 +486,7 @@
       </p>
     </div>
 
-    <div style="display: none" id="Hepatitis">
+    <div style="display: none" id="hepatitis" class="Hepatitis">
       <p>
         Hepatitis is an inflammation of the liver that is caused by a variety of
         infectious viruses and noninfectious agents leading to a range of health
@@ -462,7 +543,11 @@
       </p>
     </div>
 
-    <div style="display: none" id="Parkinson's disease">
+    <div
+      style="display: none"
+      id="parkinsons disease"
+      class="Parkinsons Disease"
+    >
       <p>
         Parkinson’s disease is a brain disorder that causes unintended or
         uncontrollable movements, such as shaking, stiffness, and difficulty
@@ -491,7 +576,43 @@
       </p>
     </div>
 
-    <div style="display: none" id="Cancer">
+    <div style="display: none" id="arthritis" class="arthritis">
+      <p>
+        Arthritis and other rheumatic diseases are common conditions that cause
+        pain, swelling, and limited movement. They affect joints and connective
+        tissues around the body. Millions of people in the U.S. have some form
+        of arthritis.<br />
+        Arthritis means redness and swelling (inflammation) of a joint. A joint
+        is where 2 or more bones meet. There are more than 100 different
+        arthritis diseases. Rheumatic diseases include any condition that causes
+        pain, stiffness, and swelling in joints, muscles, tendons, ligaments, or
+        bones. Arthritis is usually ongoing (chronic). Arthritis and other
+        rheumatic diseases are more common in women than men. They are also
+        often linked with old age. But they affect people of all ages.<br /><br />
+        The 2 most common forms of arthritis are:<br /><br />
+        Osteoarthritis: This is the most common type of arthritis. It is a
+        chronic disease of the joints, especially the weight-bearing joints of
+        the knee, hip, and spine. It destroys the coating on the ends of bones
+        (cartilage) and narrows the joint space. It can also cause bone
+        overgrowth, bone spurs, and reduced function. It occurs in most people
+        as they age. It may also occur in young people because of an injury or
+        overuse.<br /><br />
+        Rheumatoid arthritis: This is an inflammatory disease of the joint
+        linings. The inflammation may affect all of the joints. It can also
+        affect organs such as the heart or lungs.
+        <br /><br />
+        The cause depends on the type of arthritis. Osteoarthritis is caused by
+        the wear and tear of the joint over time or because of overuse.
+        Rheumatoid arthritis, lupus, and scleroderma are caused by the body’s
+        immune system attacking the body’s own tissues. Gout is caused by the
+        buildup of crystals in the joints. Some forms of arthritis can be linked
+        to genes. People with genetic marker HLA-B27 have a higher risk of
+        ankylosing spondylitis. For some other forms of arthritis, the cause is
+        not known.
+      </p>
+    </div>
+
+    <div style="display: none" id="cancer" class="Cancer">
       <p>
         Cancer is a disease in which some of the body’s cells grow
         uncontrollably and spread to other parts of the body. Cancer can start
@@ -529,41 +650,6 @@
       </p>
     </div>
 
-    <div style="display: none" id="Arthritis">
-      <p>
-        Arthritis and other rheumatic diseases are common conditions that cause
-        pain, swelling, and limited movement. They affect joints and connective
-        tissues around the body. Millions of people in the U.S. have some form
-        of arthritis.<br />
-        Arthritis means redness and swelling (inflammation) of a joint. A joint
-        is where 2 or more bones meet. There are more than 100 different
-        arthritis diseases. Rheumatic diseases include any condition that causes
-        pain, stiffness, and swelling in joints, muscles, tendons, ligaments, or
-        bones. Arthritis is usually ongoing (chronic). Arthritis and other
-        rheumatic diseases are more common in women than men. They are also
-        often linked with old age. But they affect people of all ages.<br /><br />
-        The 2 most common forms of arthritis are:<br /><br />
-        Osteoarthritis: This is the most common type of arthritis. It is a
-        chronic disease of the joints, especially the weight-bearing joints of
-        the knee, hip, and spine. It destroys the coating on the ends of bones
-        (cartilage) and narrows the joint space. It can also cause bone
-        overgrowth, bone spurs, and reduced function. It occurs in most people
-        as they age. It may also occur in young people because of an injury or
-        overuse.<br /><br />
-        Rheumatoid arthritis: This is an inflammatory disease of the joint
-        linings. The inflammation may affect all of the joints. It can also
-        affect organs such as the heart or lungs.
-        <br /><br />
-        The cause depends on the type of arthritis. Osteoarthritis is caused by
-        the wear and tear of the joint over time or because of overuse.
-        Rheumatoid arthritis, lupus, and scleroderma are caused by the body’s
-        immune system attacking the body’s own tissues. Gout is caused by the
-        buildup of crystals in the joints. Some forms of arthritis can be linked
-        to genes. People with genetic marker HLA-B27 have a higher risk of
-        ankylosing spondylitis. For some other forms of arthritis, the cause is
-        not known.
-      </p>
-    </div>
     <!-- End Hero
     -->
     <br />
